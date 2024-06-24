@@ -1,24 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+
 
 function App() {
+  const api = 'http://localhost:3000'
+
+  const handleGet = async () => {
+    await axios.get(api + '/api/app').then(res => {
+      console.log(res.data);
+    }).catch(err => {
+      console.log(err)
+    })
+  };
+
+  const handlePost = async () => {
+    await axios.post(api + '/api/app', { name: 'new record' }).then(res => {
+      console.log(res.data);
+    }).catch((err) => {
+      console.log(err)
+    })
+  };
+
+  const handlePut = async () => {
+    await axios.put(api + '/api/app/2', { name: 'data edit ' }).then(res => {
+      console.log(res.data);
+    }).catch(err => {
+      console.log(err)
+    })
+  };
+
+  const handleDelete = async () => {
+    await axios.delete(api + '/api/app/1').then((res) => {
+      console.log(res.data);
+    }).catch(err => {
+      console.log(err)
+    })
+  };
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div><h3>Connect API</h3></div>
+      <button onClick={handleGet}>GET</button>
+      <button onClick={handlePost}>POST</button>
+      <button onClick={handlePut}>PUT</button>
+      <button onClick={handleDelete}>DELETE</button>
     </div>
+
   );
 }
 
