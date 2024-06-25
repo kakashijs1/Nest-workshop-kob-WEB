@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ececec;
+  background-color: #31a4dd;
+}
+
+.box-area {
+  width: 1300px; /* ขยายขนาดของกล่อง */
+}
+
+.right-box {
+  padding: 60px 50px 60px 60px; /* เพิ่ม padding */
+}
+
+::placeholder {
+  font-size: 18px; /* เพิ่มขนาดตัวอักษร placeholder */
+}
+
+.rounded-4 {
+  border-radius: 20px;
+}
+
+.rounded-5 {
+  border-radius: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .box-area {
+    margin: 0 10px;
+  }
+  .left-box {
+    height: 100px;
+    overflow: hidden;
+  }
+  .right-box {
+    padding: 30px;
+  }
+}
