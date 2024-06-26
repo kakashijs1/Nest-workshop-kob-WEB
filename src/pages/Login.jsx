@@ -53,20 +53,16 @@ function Login() {
       </div> */}
       <div className="container d-flex justify-content-center align-items-center min-vh-100">
         <div className="row border rounded-5 p-3 bg-white shadow box-area">
-          <div
-            className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
-            style={{ background: "#30A4DC" }}
-          >
+          <div className="col-lg-6 col-md-12 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
             <div className="featured-image mb-3">
               <img
-                src="/images/kwan.jpg"
-                className="img-fluid"
-                style={{ width: "560px" }}
+                src="/images/admin1.png"
+                className="img-fluid admin-logo"
                 alt="Featured"
               />
             </div>
             <p
-              className="text-white fs-2"
+              className="text-white fs-2 mb-5 text-center"
               style={{
                 fontFamily: "'Courier New', Courier, monospace",
                 fontWeight: 600,
@@ -75,7 +71,7 @@ function Login() {
               Login make your Work
             </p>
             <small
-              className="text-white text-wrap text-center"
+              className="text-white text-wrap text-center mb-5"
               style={{
                 width: "17rem",
                 fontFamily: "'Courier New', Courier, monospace",
@@ -84,7 +80,7 @@ function Login() {
               หากพบปัญหาใดๆ ติดต่อเจ้าหน้าที่ Developer ทันที
             </small>
           </div>
-          <div className="col-md-6 right-box">
+          <div className="col-lg-6 col-md-12 right-box">
             <div className="row align-items-center">
               <div className="header-text mb-4">
                 <h2>เข้าสู่ระบบ Admin </h2>
@@ -133,7 +129,7 @@ function Login() {
                   </small>
                 </div>
               </div>
-              <div className="input-group mb-3">
+              <div className="input-group mb-5">
                 <button
                   onClick={handleSignIn}
                   className="btn btn-lg btn-primary w-100 fs-6"
@@ -141,18 +137,17 @@ function Login() {
                   SignIn <i className="fa fa-check"></i>
                 </button>
               </div>
-              <div className="input-group mb-3">
+              {/* <div className="input-group mb-3">
                 <button className="btn btn-lg btn-light w-100 fs-6">
                   <img
                     src="/images/google.png"
-                    s
                     style={{ width: "20px" }}
                     className="me-2"
                     alt="Google"
                   />
                   <small>สร้างบัญชี</small>
                 </button>
-              </div>
+              </div> */}
               <div className="row">
                 <small>
                   Don't have an account? <Link to="#">Sign Up</Link>

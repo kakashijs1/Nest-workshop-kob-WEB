@@ -2,12 +2,36 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #ececec;
-  background-color: #31a4dd;
+  background: url("../../public/images/krung1.png") no-repeat center center
+    fixed;
+  background-size: cover;
+}
+
+/* Responsive Design for admin logo */
+.admin-logo {
+  width: 100%; /* default width for mobile devices */
+  max-width: 250px; /* adjust max width for larger screens */
 }
 
 .box-area {
-  width: 1300px; /* ขยายขนาดของกล่อง */
+  width: 100%;
+  max-width: 1300px; /* ขยายขนาดของกล่อง */
+}
+
+.left-box {
+  background: #30a4dc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.left-box img {
+  width: 80%;
+  max-width: 200px;
+  height: auto;
 }
 
 .right-box {
@@ -31,8 +55,7 @@ body {
     margin: 0 10px;
   }
   .left-box {
-    height: 100px;
-    overflow: hidden;
+    padding: 10px;
   }
   .right-box {
     padding: 30px;
