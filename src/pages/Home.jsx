@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import config from "../config";
 import Swal from "sweetalert2";
+import BackOffice from "../components/BackOffice";
 
 function Home() {
   const [userName, setUserName] = useState("");
@@ -27,14 +28,14 @@ function Home() {
     }
   };
   return (
-    <>
+    <BackOffice>
       <div className="sidebar">
         <div>BackOffice</div>
         <div>USER: {userName}</div>
       </div>
 
       <div className="content"></div>
-    </>
+    </BackOffice>
   );
 }
 
