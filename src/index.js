@@ -5,6 +5,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import Company from './pages/Company';
+import Product from './pages/Product';
 
 import {
   createBrowserRouter,
@@ -20,7 +22,15 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
-  }
+  },
+  {
+    path: "/company",
+    element: <Company />
+  },
+  {
+    path: "/product",
+    element: <Product />
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

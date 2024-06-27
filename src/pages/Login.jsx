@@ -12,7 +12,7 @@ function Login() {
 
   const navigate = useNavigate();
 
-  const handleSignIn = async () => {
+  const handleSignIn = async (e) => {
     try {
       const payload = {
         usr: username,

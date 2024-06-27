@@ -8,7 +8,7 @@ function BackOffice(props) {
             <Navbar />
             <Sidebar />
             <div className="content-wrapper">
-                {props.childen}
+                {props.children}
             </div>
 
             <Footer />

@@ -1,5 +1,34 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import config from "../config";
+import Swal from "sweetalert2";
+
 function Navbar() {
+    const [userName, setUserName] = useState("");
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        try {
+            const res = await axios.get(
+                config.apiPath + "/api/user/info",
+                config.headers()
+            );
+
+            setUserName(res.data.payload.username);
+        } catch (e) {
+            Swal.fire({
+                title: "error",
+                text: e,
+                icon: "error",
+            });
+        }
+    };
+
+
     return <>
         <nav className="main-header navbar navbar-expand navbar-white navbar-light">
             <ul className="navbar-nav">
@@ -12,7 +41,12 @@ function Navbar() {
                 <li className="nav-item d-none d-sm-inline-block">
                     <Link to="#" className="nav-link">Contact</Link>
                 </li>
+                <button type="button" class="btn btn-secondary">
+                    USER : {userName} <span class="badge bg-secondary">ผู้ใช้</span>
+                </button>
+
             </ul>
+
             <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                     <Link className="nav-link" data-widget="navbar-search" href="#" role="button">
