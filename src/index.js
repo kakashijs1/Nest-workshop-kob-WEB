@@ -7,11 +7,12 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Company from './pages/Company';
 import Product from './pages/Product';
-
+import Lotto from './pages/Lotto';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 
 const router = createBrowserRouter([
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/product",
     element: <Product />
+  },
+  {
+    path: "/lotto",
+    element: <Lotto />
   },
 ]);
 

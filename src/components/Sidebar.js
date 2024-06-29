@@ -94,7 +94,7 @@ function Sidebar() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/billSale" className="nav-link">
+                            <Link to="/lotto" className="nav-link">
                                 <i className="nav-icon fa fa-file"></i>
                                 <p>
                                     Lottery
