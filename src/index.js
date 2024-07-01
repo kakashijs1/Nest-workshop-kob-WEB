@@ -12,12 +12,17 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Index from './pages/Index';
 
 
 const router = createBrowserRouter([
 
   {
     path: "/",
+    element: <Index />,
+  },
+  {
+    path: "/login",
     element: <Login />,
   },
   {
@@ -26,16 +31,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/company",
-    element: <Company />
+    element: <Company />,
   },
   {
     path: "/product",
-    element: <Product />
+    element: <Product />,
   },
   {
     path: "/lotto",
-    element: <Lotto />
+    element: <Lotto />,
   },
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
